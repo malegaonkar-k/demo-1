@@ -9,9 +9,8 @@ export class App extends Component {
     render() {
             console.log("store :",this.props)
         return (
-            <div>
-                <div className="display-1"> its bootstrap!!!</div>
-                <div > its bootstrap!!!</div>
+            <div className="container">
+                <div className="row">
                 <h1>{this.props.geod.title || 'Hello World!'}</h1>
                 {this.props.geod.title ?
                     <button onClick={this.props.closeGeod}>
@@ -21,12 +20,8 @@ export class App extends Component {
                         Click Me!
                     </button>
                 }
-                <div className="container">
-                    <div className="jumbotron bg-info">
-                        <h1 className="display-3">Hello, world!</h1>
-                    </div>
-                </div>
 
+            </div>
             </div>
         );
     }

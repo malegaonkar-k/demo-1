@@ -1,20 +1,36 @@
-import React, { Component, } from 'react';
+import React, {Component,} from 'react';
+//import Header from './share/components/Header';
+import BContainerWidget from "./share/components/BContainer";
+import MenuWidget from "./share/components/NavMenu";
 
-import CommentContainer from './comment/CommentContainer';
-import AppContainer from './App/AppContainer';
+//import Footer from './share/components/Footer';
 
-// App.js
-export class Container extends Component{
+
+export class NavbarInstance extends Component {
+
 
     render() {
-            console.log("store :",this.props)
+console.log("props : ",this.props);
+
         return (
-            <div>
-                 <AppContainer />
-                 <CommentContainer />
-            </div>
-             );
+
+<div>
+   <MenuWidget />
+   <BContainerWidget />
+</div>
+
+
+    );
+    }
     }
 
-}
-export default Container;
+    class Container extends Component {
+        render() {
+        return (
+
+        <NavbarInstance/>
+        );
+    }
+    }
+
+    export default Container;
